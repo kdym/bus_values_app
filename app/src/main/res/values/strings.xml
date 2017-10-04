@@ -7,4 +7,14 @@
     <string name="searching_for_server">Searching for Server…</string>
     <string name="server_not_found">Can\'t find Server. Try again later or check your connection with the Internet</string>
     <string name="try_again">Try Again</string>
+    <string name="hours">Hours</string>
+    <string name="total_price">Total Price</string>
+    <string name="currency_symbol">$</string>
+    <string name="decimal_separator">.</string>
+    <string name="thousands_separator">,</string>
+    <string name="calculate">Calculate</string>
+    <string name="required_field">This field is required</string>
+    <string name="invalid_date">Invalid Date</string>
+    <string name="details">Details</string>
+    <string name="month_day_format">MMM/dd</string>
 </resources>

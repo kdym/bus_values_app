@@ -37,12 +37,8 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         Calendar date = Calendar.getInstance();
 
         if (!editTextValue.equals("")) {
-            SimpleDateFormat dateFormat = new SimpleDateFormat(getString(R.string.date_format));
-
-            try {
-                date.setTime(dateFormat.parse(editTextValue));
-            } catch (ParseException e) {
-                e.printStackTrace();
+            if (Parser.parseDate(editTextValue, getContext()) != null) {
+                date.setTime(Parser.parseDate(editTextValue, getContext()));
             }
         }
 
@@ -61,8 +57,6 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
 
         calendar.set(i, i1, i2);
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(getString(R.string.date_format));
-
-        editText.setText(simpleDateFormat.format(calendar.getTime()));
+        editText.setText(Formatter.formatDate(calendar.getTime(), getContext()));
     }
 }

@@ -57,7 +57,7 @@ public class ApiServer {
         return new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())
-                .baseUrl(String.format("%s:%s", this.BASE_URL, this.PORT))
+                .baseUrl(String.format("http://%s:%s", this.BASE_URL, this.PORT))
                 .build();
     }
 }
